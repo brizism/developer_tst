@@ -27,13 +27,14 @@ class Home extends Component {
       .catch(err => console.log(err))
   }
 
-
   render() {
+    console.log(this.state.topFiveCoins);
+    const {topFiveCoinsLoaded} = this.state;
     return (
       <div>
-      
+        {topFiveCoinsLoaded ? <CurrentMarketValues data={this.state.topFiveCoins}/> : null}
       </div>
-    )
+    );
   }
   
 }
