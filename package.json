@@ -4,10 +4,13 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-    "material-ui": "^0.20.0",
+    "gulp-cli": "^2.0.1",
+    "millify": "^2.0.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "styled-components": "^3.2.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -17,7 +20,11 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglifycss": "^1.0.9"
+  },
   "author": "Briseida Montiel <montielbriseida@gmail.com> (https://briseidamontiel.com)",
   "license": "ISC"
 }
