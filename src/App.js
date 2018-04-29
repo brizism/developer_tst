@@ -8,9 +8,15 @@ import './styles/min_css/styles.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-      
-      </div>
+      <Router>
+        <div>
+          <NavBar />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/coin/:id' component={CoinPage} />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
