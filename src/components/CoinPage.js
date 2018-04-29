@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import axios from 'axios';
+import CoinInformation from './CoinInformation';
 import CoinChart from './CoinChart';
 import BTC_Data from '../data/BTCData';
 
@@ -46,6 +47,7 @@ class CoinPage extends Component {
     const {coinApiData, chartData} = this.state;
     return (
       <Fragment>
+        <CoinInformation data={coinApiData} />
         <CoinChart data={chartData} />
       </Fragment>
     );
