@@ -8,7 +8,7 @@ class CoinInformation extends Component {
     const coinVolume = parseFloat(data['24h_volume_usd']);
     return (
       <div className="coin">
-        <Link className="back-link" to={'/'}>Go back</Link>
+        <Link className="back-link" to={'/developer_tst'}>Go back</Link>
         <span>{data.name}</span>
         <div className="coin__info coin__info--one">
           <div className="coin__info__first">
