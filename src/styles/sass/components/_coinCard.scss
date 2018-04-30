@@ -7,13 +7,29 @@
   margin: 0 auto;
   padding: 15rem 0;
 
+  h1 {
+    position: absolute;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    top: 5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 8px;
+  }
+
   &__card {
     background: white;
     width: 30%;
+    min-width: 29rem;
+    max-width: 43rem;
     padding: 2rem;
     margin: 3rem 0;
     border-radius: 1rem;
     box-shadow: 0 15px 30px 0 rgba(0,0,0,.11), 0 5px 15px 0 rgba(0,0,0,.08);
+
+    @media screen and (max-width: $bp-medium){
+      padding: 2rem .5rem;
+    }
 
     &__header {
       display: flex;
@@ -27,11 +43,23 @@
 
       &__currency {
         width: 50%;
+        line-height: 1.5;
+
+        @media screen and (max-width: $bp-medium){
+          h2 {
+            text-align: right;
+          }
+        }
 
         div {
           display: flex;
           justify-content: space-between;
           align-items: center;
+
+          @media screen and (max-width: $bp-medium){
+            flex-direction: column;
+            align-items: flex-end;
+          }
         }
       }
     }
@@ -45,6 +73,10 @@
         width: 33.33%;
         line-height: 4;
         padding: 1rem 0;
+
+        @media screen and (max-width: $bp-medium){
+          line-height: 2;
+        }
 
         &:nth-child(2){
           border-left: 1px solid $xdarkSnow;
