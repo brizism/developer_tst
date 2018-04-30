@@ -1,0 +1,8 @@
+.coin-chart {
+  width: 55%;
+  margin: 0 auto;
+
+  @media screen and (max-width: $bp-medium){
+    width: 100%;
+  }
+}
