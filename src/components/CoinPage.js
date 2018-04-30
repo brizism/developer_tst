@@ -5,6 +5,7 @@ import CoinChart from './CoinChart';
 import BTC_Data from '../data/BTCData';
 import ETH_Data from '../data/ETHData';
 import XRP_Data from '../data/XRPData';
+import BCH_Data from '../data/BCHData';
 
 class CoinPage extends Component {
   
@@ -49,6 +50,11 @@ class CoinPage extends Component {
       case 'XRP':
         return this.setState({
           chartData: XRP_Data
+        })
+      break;
+      case 'BCH':
+        return this.setState({
+          chartData: BCH_Data
         })
       break;
       default:
