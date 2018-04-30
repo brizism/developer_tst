@@ -1,0 +1,90 @@
+.coin {
+  width: 55%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5rem;
+  position: relative;
+
+  @media screen and (max-width: $bp-medium){
+    width: 90%;
+  }
+
+  .back-link {
+    position: absolute;
+    top: -2.8rem;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 2rem;
+    color: $green;
+
+    @media screen and (max-width: $bp-medium){
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      color: $grey;
+    }
+  }
+
+  span {
+    display: inline-block;
+    font-size: 4rem;
+    margin: 5rem;
+    background: $grey;
+    padding: .7rem 2.2rem;
+    color: $snow;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 5px;
+
+    @media screen and (max-width: $bp-medium){
+      font-size: 2rem;
+      margin: 1rem 0 2rem 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    &__first {
+      &__top {
+        font-size: 3.5rem;
+        font-weight: 700;
+
+        @media screen and (max-width: $bp-medium){
+          font-size: 1.7rem;
+        }
+
+        &::first-letter {
+          font-size: 1.7rem;
+          vertical-align: super;
+          margin-right: 4px;
+
+          @media screen and (max-width: $bp-medium){
+            font-size: 1rem;
+          }
+        }
+      }
+
+      &__bottom {
+        font-size: 1.7rem;
+        color: $grey;
+        line-height: 2;
+
+        @media screen and (max-width: $bp-medium){
+          font-size: 1.1rem;
+        }
+      }
+    }
+    
+    &--one {
+      margin-bottom: 2rem;
+    }
+
+    &--two {
+      margin-bottom: 6rem;
+    }
+  }
+}
