@@ -10,7 +10,7 @@ class App extends Component {
       <Router>
         <Fragment>
           <Switch>
-            <Route exact path='/' component={Home} />
+            <Route exact path='/developer_tst' component={Home} />
             <Route exact path='/coin/:id' component={CoinPage} />
           </Switch>
         </Fragment>
