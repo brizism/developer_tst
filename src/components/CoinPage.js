@@ -6,6 +6,7 @@ import BTC_Data from '../data/BTCData';
 import ETH_Data from '../data/ETHData';
 import XRP_Data from '../data/XRPData';
 import BCH_Data from '../data/BCHData';
+import EOS_Data from '../data/EOSData';
 
 class CoinPage extends Component {
   
@@ -55,6 +56,11 @@ class CoinPage extends Component {
       case 'BCH':
         return this.setState({
           chartData: BCH_Data
+        })
+      break;
+      case 'EOS':
+        return this.setState({
+          chartData: EOS_Data
         })
       break;
       default:
