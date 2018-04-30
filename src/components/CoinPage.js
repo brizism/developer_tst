@@ -29,7 +29,7 @@ class CoinPage extends Component {
       .then(res => this.setState({
         coinApiData: res.data[0],
         coinSymbol: res.data[0].symbol
-      }))
+      })) 
     .then(() => {
       this.fetchChartData(this.state.coinSymbol)
       setTimeout(() => this.fetchcoinApiData, 300000);
@@ -68,7 +68,7 @@ class CoinPage extends Component {
     }
   }
   render() {
-    console.log(this.state.chartData);
+    // console.log(this.state.chartData);
     const {coinApiData, chartData} = this.state;
     return (
       <Fragment>

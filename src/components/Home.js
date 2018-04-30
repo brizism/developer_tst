@@ -28,7 +28,7 @@ class Home extends Component {
   }
 
   render() {
-    console.log(this.state.topFiveCoins);
+    // console.log(this.state.topFiveCoins);
     const {topFiveCoinsLoaded} = this.state;
     return (
       <div>
