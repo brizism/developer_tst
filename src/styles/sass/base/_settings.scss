@@ -5,3 +5,23 @@ $xdarkSnow: #E5E9F2;
 $green: #13CE66;
 $red: #FF4949;
 $yellow: #FFC82C;
+$steel: #273444;
+$grey: #8492a6;
+
+
+// Align classes
+.center {
+  text-align: center;
+}
+
+// Breakpoints
+$bp-small: 30em; // 480px
+$bp-medium: 48em; // 768px
+$bp-large: 64em; // 1024px
+$bp-xlarge: 120em; // 1920px
+
+// Media Queries
+$mq-small: "(min-width: #{$bp-small})";
+$mq-medium: "(min-width: #{$bp-medium})";
+$mq-large: "(min-width: #{$bp-large})";
+$mq-xlarge: "(min-width: #{$bp-xlarge})";
