@@ -14,6 +14,10 @@ const Button = styled.button`
     display: inline-block;
     background: #EFF2F7;
     cursor: pointer;
+    &:hover {
+        background: #273444;
+        color: #8492a6;
+    }
 `;
 
 
@@ -23,6 +27,7 @@ class CurrentMarketValues extends Component {
         return (
             <Fragment>
               <div className="container">
+                <h1>Top Five Digital Currencies</h1>
                 {data.map((coin, i) => {
                     const symbol = coin.symbol;
                     const coinVolume = parseFloat(coin['24h_volume_usd']);
