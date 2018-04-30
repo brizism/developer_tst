@@ -1,26 +1,44 @@
-import React, { Component, Fragment } from 'react';
-import axios from 'axios';
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import millify from 'millify';
 
 class CoinInformation extends Component {
-  constructor(props){
-    super(props)
-  }
-  
-
   render() {
     const {data} = this.props;
     const coinVolume = parseFloat(data['24h_volume_usd']);
     return (
-      <Fragment>
-        <h1>{data.name}</h1>
-        <p>Volume (24h): ${millify(coinVolume)}</p>
-        <p>Available Supply: ${millify(parseFloat(data.available_supply))}</p>
-        <p>Market Cap: ${millify(parseFloat(data.market_cap_usd))}</p>
-        <p>Max Supply: ${millify(parseFloat(data.max_supply))}</p>
-        <p>Total Supply: ${millify(parseFloat(data.total_supply))}</p>
-        <p>Price  USD: ${millify(parseFloat(data.price_usd))}</p>
-      </Fragment>
+      <div className="coin">
+        <Link className="back-link" to={'/'}>Go back</Link>
+        <span>{data.name}</span>
+        <div className="coin__info coin__info--one">
+          <div className="coin__info__first">
+            <div className="coin__info__first__top">${millify(coinVolume)}</div>
+            <div className="coin__info__first__bottom">Volume (24h)</div>
+          </div>
+          <div className="coin__info__first">
+            <div className="coin__info__first__top">${millify(parseFloat(data.available_supply))}</div>
+            <div className="coin__info__first__bottom">Available Supply</div>
+          </div>
+          <div className="coin__info__first">
+            <div className="coin__info__first__top">${millify(parseFloat(data.market_cap_usd))}</div>
+            <div className="coin__info__first__bottom">Market Cap</div>
+          </div>
+        </div>
+        <div className="coin__info coin__info--two">
+          <div className="coin__info__second">
+            <div className="coin__info__first__top">${millify(parseFloat(data.max_supply))}</div>
+            <div className="coin__info__first__bottom">Max Supply</div>
+          </div>
+          <div className="coin__info__second">
+            <div className="coin__info__first__top">${millify(parseFloat(data.total_supply))}</div>
+            <div className="coin__info__first__bottom">Total Supply</div>
+          </div>
+          <div className="coin__info__second">
+            <div className="coin__info__first__top">${millify(parseFloat(data.price_usd))}</div>
+            <div className="coin__info__first__bottom">Price  USD</div>
+          </div>
+        </div>
+      </div>
     )
   }
 }
