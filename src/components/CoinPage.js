@@ -3,6 +3,7 @@ import axios from 'axios';
 import CoinInformation from './CoinInformation';
 import CoinChart from './CoinChart';
 import BTC_Data from '../data/BTCData';
+import ETH_Data from '../data/ETHData';
 
 class CoinPage extends Component {
   
@@ -38,12 +39,18 @@ class CoinPage extends Component {
         return this.setState({
           chartData: BTC_Data
         })
+      break;
+      case 'ETH':
+        return this.setState({
+          chartData: ETH_Data
+        })
+      break;
       default:
         break;
     }
   }
   render() {
-    console.log(this.state.coinApiData);
+    console.log(this.state.chartData);
     const {coinApiData, chartData} = this.state;
     return (
       <Fragment>
